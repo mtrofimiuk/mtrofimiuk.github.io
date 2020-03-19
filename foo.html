@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://stanwood.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-zafpfn/b/23/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=55900677"></script>
+</head>
+
+
+<body>
+    <script type="text/javascript">
+	window.ATL_JQ_PAGE_PROPS = {
+		"triggerFunction": function(showCollectorDialog) {
+		        $("document").ready(function () {
+                    setTimeout(function () {
+                        console.log("Opening issue dialog");
+                        showCollectorDialog()
+                    }, 50)
+                });
+		        $("#show-issue-dialog").on("click", function (event) {
+                    showCollectorDialog();
+                    event.preventDefault();
+                })
+		}
+	};
+    </script>
+
+    <a href="#" id="show-issue-dialog">Create jira bug</a>
+
+</body>
+</html>
